@@ -1,3 +1,4 @@
+import 'bootstrap';
 import '../styles/index.scss';
 
-console.log('webpack starterkit');
+console.log('This is the index page.');
