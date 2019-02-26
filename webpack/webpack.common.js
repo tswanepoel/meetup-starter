@@ -5,11 +5,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: Path.resolve(__dirname, './src/pages/index/index.js'),
-    about: Path.resolve(__dirname, './src/pages/about/about.js')
+    index: Path.resolve(__dirname, '../src/pages/index/index.js'),
+    about: Path.resolve(__dirname, '../src/pages/about/about.js')
   },
   output: {
-    path: Path.join(__dirname, './build'),
+    path: Path.join(__dirname, '../build'),
     filename: 'js/[name].js'
   },
   optimization: {
@@ -21,16 +21,16 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['build'], { root: Path.resolve(__dirname, '..') }),
     new CopyWebpackPlugin([
-      { from: Path.resolve(__dirname, './public'), to: 'public' }
+      { from: Path.resolve(__dirname, '../public'), to: 'public' }
     ]),
     new HtmlWebpackPlugin({
-      template: Path.resolve(__dirname, './src/pages/index/index.html'),
+      template: Path.resolve(__dirname, '../src/pages/index/index.html'),
       inject: true,
       chunks: ['index'],
       filename: 'index.html'
     }),
     new HtmlWebpackPlugin({
-      template: Path.resolve(__dirname, './src/pages/about/about.html'),
+      template: Path.resolve(__dirname, '../src/pages/about/about.html'),
       inject: true,
       chunks: ['about'],
       filename: 'about.html'
@@ -38,7 +38,7 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      '~': Path.resolve(__dirname, './src')
+      '~': Path.resolve(__dirname, '../src')
     }
   },
   module: {
