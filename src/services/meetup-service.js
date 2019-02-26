@@ -3,7 +3,7 @@ const MeetupApiKey = '1f3f6c70153a47d46196de194e465d';
 
 export default class MeetupService {
 
-    static getGroups(country, count) {
+    static getGroups(country) {
         return this.ajax('GET', `${MeetupApiBaseUrl}/find/groups?country=${country}&key=${MeetupApiKey}`);
     }
 
