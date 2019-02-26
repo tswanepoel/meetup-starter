@@ -18,5 +18,6 @@ steps:
 - script: |
     npm install -g webpack webpack-cli --save-dev
     npm link webpack
+    npm link webpack-merge
     npx webpack --config webpack/webpack.config.prod.js --colors
   displayName: 'npm install, run webpack'
