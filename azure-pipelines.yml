@@ -19,3 +19,7 @@ steps:
     npm install
     npm run-script build
   displayName: 'npm install, npm run-script build'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(System.DefaultWorkingDirectory)/build'
