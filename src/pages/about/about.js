@@ -1,4 +1,4 @@
-import '../styles/about.scss';
+import './about.scss';
 import 'bootstrap';
 
 console.log('This is the about page.');
